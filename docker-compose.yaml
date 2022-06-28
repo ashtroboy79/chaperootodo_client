@@ -1,8 +1,8 @@
 version: "3.7"
 services:
   chaperoo-client:
-    image: jordangrindrod/chaperoo-client
-    build: .
+    image: ashtroboy/
+    build: .chaperoo-frontend:${app-version}
     ports:
       - target: 80
         published: 80
@@ -10,8 +10,8 @@ services:
       - chaperoo-service    
   chaperoo-service: 
     image: jordangrindrod/chaperoo-service
-    environment:
-      - DB_PASSWORD=${DB_PASSWORD}
+    # environment:
+    #   - DB_PASSWORD=${DB_PASSWORD}
     depends_on: 
       - chaperoo-db
   chaperoo-db:
