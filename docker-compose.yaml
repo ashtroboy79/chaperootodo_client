@@ -1,8 +1,8 @@
 version: "3.7"
 services:
   chaperoo-client:
-    image: ashtroboy/
-    build: .chaperoo-frontend:${app-version}
+    image: ashtroboy/chaperoo-frontend:${app-version}
+    build: . 
     ports:
       - target: 80
         published: 80
